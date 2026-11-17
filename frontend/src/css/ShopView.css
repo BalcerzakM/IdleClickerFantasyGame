@@ -37,7 +37,7 @@
 
 /* Prawa kolumna – sklep */
 .shop-panel {
-	background: url("../assets/scenes/dressing_room.png") center/cover no-repeat;
+	background: url("../assets/scenes/armory.png") center/cover no-repeat;
 	height: 850px;
 	border: 2px solid var(--border-color);
 	border-radius: 12px;

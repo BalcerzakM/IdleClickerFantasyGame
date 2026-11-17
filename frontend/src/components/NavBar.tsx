@@ -113,14 +113,14 @@ function NavBar() {
 					onMouseEnter={playHover}
 					onClick={() => navigateWithClick(navigate, "/")}
 				>
-					Klub
+					Tavern
 				</button>
 				<button
 					type="button"
 					onMouseEnter={playHover}
 					onClick={() => navigateWithClick(navigate, "/shop")}
 				>
-					Szatnia
+					Armory
 				</button>
 				<button
 					type="button"

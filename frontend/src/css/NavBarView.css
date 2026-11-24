@@ -63,7 +63,7 @@ body {
     height: 100%;
     flex-shrink: 0;
 
-    background: url(./src/assets/other/nav_bg.png);
+    background: url(../assets/other/nav_bg.png);
     background-position: center;
     background-size: contain;
     /* background-color: #291c14; */
@@ -106,7 +106,7 @@ body {
     grid-template-rows: auto auto;
     gap: 6px;
 
-    background: url(./src/assets/other/character_bg3.png) center/cover no-repeat;
+    background: url(../assets/other/character_bg3.png) center/cover no-repeat;
 
     border-right: 2px solid #69482e;
     border-bottom: 4px solid #1d130c;
@@ -350,7 +350,7 @@ body {
 
     margin: 5px 0;
 
-    background: url(./src/assets/other/button_1_test.png) center/cover no-repeat;
+    background: url(../assets/other/button_1_test.png) center/cover no-repeat;
 
     color: #dfc59a;
 
@@ -462,7 +462,7 @@ body {
         background-color 0.2s ease,
         border-color 0.2s ease;
 
-    background: url(./src/assets/other/button_2.png);
+    background: url(../assets/other/button_2.png);
 
       background-size: cover; 
   

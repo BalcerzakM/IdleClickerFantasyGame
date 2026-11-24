@@ -1,32 +1,32 @@
 :root {
-	/* Tła */
-	--bg-body: #070709;
-	--bg-main: #111116;
-	--bg-dark: #0b0b0f;
-	--bg-panel: #16131a;
+    /* Tła */
+    --bg-body: #160e0b;
+    --bg-main: #21150f;
+    --bg-dark: #100b09;
+    --bg-panel: #2b1b13;
 
-	/* Obramowania */
-	--border-color: #1e1a22;
-	--border-glow: #2b2233;
+    /* Obramowania */
+    --border-color: #563725;
+    --border-glow: #9a6038;
 
-	/* Neony */
-	--neon-blue: #4da3ff;
-	--neon-blue-glow: #82c4ff;
+    /* Akcenty – światło świec i ognia */
+    --neon-blue: #d18a43;
+    --neon-blue-glow: #ffc477;
 
-	--neon-orange: #ff9a3c;
-	--neon-gold: #d89b52;
+    --neon-orange: #d97832;
+    --neon-gold: #c99a55;
 
-	--neon-pink: #b04cff;
-	--neon-red: #7a1d2d;
+    --neon-pink: #963f32;
+    --neon-red: #702b27;
 
-	/* Tekst */
-	--text-light: #b7a38f;
-	--text-muted: #7b6d62;
-	--text-hover: #e0c7ae;
+    /* Tekst */
+    --text-light: #e2c5a0;
+    --text-muted: #a58a70;
+    --text-hover: #ffe0b5;
 
-	/* Hover */
-	--hover-dark: #1c1117;
-	--hover-light: #24161f;
+    /* Hover */
+    --hover-dark: #382117;
+    --hover-light: #492b1b;
 }
 
 * {
@@ -109,7 +109,7 @@ body::before {
 	position: relative;
 	width: 80%;
 	height: 100%;
-	background: url("assets/scenes/club_main.png") center / contain no-repeat;
+	background: url("assets/scenes/tavern_main.png") center / contain no-repeat;
 	background-color: #0b0b0f;
 	border: 2px solid #1f1a24;
 	box-shadow:
@@ -405,7 +405,7 @@ body::before {
 	position: relative;
 	width: 80%;
 	height: 100%;
-	background: url("assets/scenes/outside_main.png") center / contain no-repeat;
+	background: url("assets/scenes/isometric_city_projection.png") center / contain no-repeat;
 	background-color: #0b0b0f;
 	border: 2px solid #1f1a24;
 	box-shadow:

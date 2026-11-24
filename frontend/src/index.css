@@ -753,6 +753,8 @@ body::before {
 	width: 100%;
 	height: 100%;
 
+	left: 100px;
+
 	padding: 30px;
 
 	position: absolute;
@@ -772,10 +774,10 @@ body::before {
     align-items: center;
     flex-direction: column;
 
-    left: 460px;
-    top: 210px;
+    left: 370px;
+    top: 50px;
 
-    width: 740px;
+    width: 775px;
 }
 
 .help-text-wrapper {
@@ -786,8 +788,6 @@ body::before {
     text-align: justify;
     color: black;
 
-    height: 300px;
-    overflow-y: auto;
     padding-right: 10px;
 }
 
@@ -803,22 +803,30 @@ body::before {
 }
 
 .help-text-wrapper p {
-    font-size: 18px;
+	font-size: 20px;
+	line-height: 1.3;
+
+	column-count: 2;
+	column-gap: 60px;
+	max-height: 500px;
+
+	text-align: justify;
+	hyphens: auto;
 }
 
 .help-close {
 	position: relative;
     color: #7a1d2d;
 
-	top: 3px;
-	left: 363px;
+	top: 0px;
+	left: 340px;
 
 	border: none;
 	background: none;
 
 	cursor: pointer;
 
-	font-size: 30px;
+	font-size: 40px;
 }
 
 .help-close:hover {

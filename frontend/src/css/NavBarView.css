@@ -1,317 +1,629 @@
-.navBar {
-	width: 20%;
-	height: 100%;
-	flex-shrink: 0;
+
+/* =====================================================
+   FANTASY TAVERN - LIVING WOOD THEME
+   Warm oak / chestnut / copper / parchment
+   ===================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:wght@400;500;600;700&family=Cinzel:wght@400;500;600;700&family=Cinzel+Decorative:wght@400;700&display=swap');
+
+
+/* =====================================================
+   COLOR PALETTE
+   ===================================================== */
+
+:root {
+    /* Typography */
+    --text-light: #e0cba7;
+    --text-dark: #2b1b12;
+
+    --font-title: 'Cinzel Decorative', serif;
+    --font-main: 'Alegreya', serif;
+
+    /* Wood */
+    --wood-dark: #2b1b12;
+    --wood-medium: #493020;
+    --wood-light: #65432b;
+    --wood-highlight: #805638;
+
+    /* Materials */
+    --parchment: #dfc79e;
+    --old-brass: #b38a55;
+    --copper: #a66b43;
+    --old-iron: #514338;
+
+    /* Accents */
+    --burgundy: #713d32;
+    --olive: #68704c;
+
+    /* Compatibility */
+    --neon-gold: #c5a16d;
+    --neon-red: #b46b55;
+    --neon-blue: #899b91;
+
+    --border-color: #765239;
 }
+
+
+/* =====================================================
+   GLOBAL
+   ===================================================== */
+
+body {
+    font-family: var(--font-main);
+    color: var(--text-light);
+}
+
+
+/* =====================================================
+   NAVBAR
+   ===================================================== */
+
+.navBar {
+    width: 20%;
+    height: 100%;
+    flex-shrink: 0;
+
+    background: url(./src/assets/other/nav_bg.png);
+    background-position: center;
+    background-size: contain;
+    /* background-color: #291c14; */
+
+    /* background-image:
+        repeating-linear-gradient(
+            0deg,
+            transparent 0px,
+            rgba(0,0,0,0.16) 2px,
+            transparent 4px,
+            transparent 13px
+        ),
+        repeating-linear-gradient(
+            90deg,
+            rgba(255,190,110,0.018) 0px,
+            transparent 3px,
+            transparent 55px
+        ); */
+
+    border-right: 4px solid #1b120d;
+
+    box-shadow:
+        inset -3px 0 8px rgba(0,0,0,0.4),
+        5px 0 15px rgba(0,0,0,0.45);
+}
+
+
+/* =====================================================
+   CHARACTER PANEL
+   ===================================================== */
 
 .navBar-character {
-	padding: 14px;
+    padding: 14px;
 
-	width: 100%;
-	height: 33%;
+    width: 100%;
+    height: 33%;
 
-	display: grid;
-	grid-template-columns: 180px 1fr;
-	grid-template-rows: auto auto;
-	gap: 6px;
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    grid-template-rows: auto auto;
+    gap: 6px;
 
-	background: linear-gradient(180deg, #15131a 0%, #0d0d12 100%);
+    background: url(./src/assets/other/character_bg3.png) center/cover no-repeat;
 
-	border-right: 1px solid #241b29;
-	border-bottom: 1px solid #241b29;
+    border-right: 2px solid #69482e;
+    border-bottom: 4px solid #1d130c;
 
-	box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
+    box-shadow:
+        inset 0 0 15px rgba(0,0,0,0.3),
+        inset 0 1px rgba(255,210,150,0.07);
 }
+
 
 .navBar-character button {
-	grid-row: 1 / 3;
+    grid-row: 1 / 3;
 
-	width: 180px;
-	height: 180px;
+    width: 150px;
+    height: 150px;
 
-	border: 0;
-	background: transparent;
+    margin-top: 25px;
+    margin-left: 15px;
 
-	cursor: pointer;
-	transition: transform 0.3s;
+    padding: 4px;
+
+    background-color: #24170f;
+
+    border: 3px solid #966a43;
+    border-radius: 3px;
+
+    cursor: pointer;
+
+    box-shadow:
+        inset 0 0 5px #000,
+        0 3px 7px rgba(0,0,0,0.5);
+
+    transition:
+        border-color 0.25s,
+        filter 0.25s;
 }
+
+
+.navBar-character button:hover {
+    border-color: #c29a61;
+    filter: brightness(1.08);
+}
+
 
 .navBar-character button img {
-	width: 180px;
-	height: 180px;
+    width: 180px;
+    height: 180px;
 
-	object-fit: cover;
-	border-radius: 8px;
+    object-fit: cover;
 
-	box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    border-radius: 1px;
+
+    box-shadow:
+        inset 0 0 8px rgba(0,0,0,0.5);
 }
+
+
+/* =====================================================
+   CURRENCIES
+   ===================================================== */
 
 .navBar-character-currencies {
-	height: 180px;
+    height: 180px;
 
-	display: grid;
-	grid-template-columns: 40px 1fr;
+    display: grid;
+    grid-template-columns: 40px 1fr;
 
-	align-content: center;
-	align-items: center;
+    align-content: center;
+    align-items: center;
 
-	column-gap: 10px;
-	row-gap: 12px;
+    column-gap: 10px;
+    row-gap: 12px;
 
-	text-align: left;
-	color: var(--text-light);
-	font-family: "Teko", sans-serif;
-	font-size: 26px;
-	letter-spacing: 1px;
+    text-align: left;
+
+    color: #e3cba4;
+
+    font-family: var(--font-main);
+    font-size: 26px;
+    font-weight: 600;
+
+    letter-spacing: 0.5px;
+
+    text-shadow:
+        1px 2px 3px rgba(0,0,0,0.9);
 }
+
 
 .currencyImg {
-	margin-top: 0;
+    margin-top: 0;
 
-	width: 34px;
-	height: 34px;
+    width: 34px;
+    height: 34px;
 
-	filter: drop-shadow(0 0 4px rgba(255, 154, 60, 0.4));
+    filter:
+        sepia(0.12)
+        drop-shadow(1px 2px 2px rgba(0,0,0,0.6));
 }
+
 
 .navBar-character-currencies p {
-	margin: 0;
-	line-height: 1;
+    margin: 0;
+    line-height: 1;
 }
+
+
+/* =====================================================
+   AURA
+   ===================================================== */
 
 .navBar-character-aura {
-	grid-column: 1 / 3;
+    grid-column: 1 / 3;
 
-	display: flex;
-	flex-direction: column;
-	gap: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 
-	width: 100%;
-	margin-top: 0;
+    width: 100%;
+    margin-top: 0;
 
-	color: var(--text-light);
-	font-family: "Teko", sans-serif;
-	font-size: 22px;
-	letter-spacing: 1px;
+    color: #e0cba7;
+
+    font-family: var(--font-title);
+    font-size: 18px;
+
+    letter-spacing: 1px;
+
+    text-shadow:
+        1px 2px 3px rgba(0,0,0,0.9);
 }
+
 
 .navBar-character-aura p {
-	margin: 0;
-	line-height: 1;
-	text-align: center;
+    margin: 0;
+    line-height: 1;
+    text-align: center;
 }
+
 
 .auraBar-wrapper {
-	position: relative;
-	cursor: pointer;
+    position: relative;
+    cursor: pointer;
 }
+
 
 .navBar-character-aura-points {
-	font-size: 9px;
-	opacity: 0;
-	visibility: hidden;
+    font-family: var(--font-main);
+    font-size: 12px;
 
-	position: absolute;
-	top: 20px;
-	left: 50%;
-	transform: translateX(-50%);
+    color: #e4cda7;
 
-	white-space: nowrap;
-	transition: opacity 0.2s ease;
+    opacity: 0;
+    visibility: hidden;
+
+    position: absolute;
+    top: 20px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    white-space: nowrap;
+
+    transition: opacity 0.2s ease;
 }
+
 
 .auraBar-wrapper:hover .navBar-character-aura-points {
-	opacity: 1;
-	visibility: visible;
+    opacity: 1;
+    visibility: visible;
 }
+
 
 .auraBar {
-	width: 100%;
-	height: 14px;
+    width: 100%;
+    height: 14px;
 
-	background: #2a2a2a;
-	border: 1px solid #3b2a45;
-	border-radius: 999px;
+    background-color: #251a14;
 
-	overflow: hidden;
+    border: 1px solid #92704d;
+    border-radius: 3px;
 
-	box-shadow:
-		inset 0 0 8px rgba(0, 0, 0, 0.7),
-		0 0 6px rgba(139, 92, 246, 0.18);
+    overflow: hidden;
+
+    box-shadow:
+        inset 0 2px 5px rgba(0,0,0,0.9);
 }
+
 
 .auraBar-fill {
-	height: 100%;
+    height: 100%;
 
-	background: linear-gradient(90deg, #6d28d9 0%, #a78bfa 100%);
-	border-radius: 999px;
+    background-color: #866b9a;
 
-	box-shadow: 0 0 8px rgba(167, 139, 250, 0.7);
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,0.08),
+            transparent 65%
+        );
+
+    border-radius: 2px;
+
+    box-shadow:
+        inset 0 1px 2px rgba(255,255,255,0.2);
 }
+
+
+/* =====================================================
+   NAVIGATION - WOODEN PLANKS
+   ===================================================== */
 
 .navBar-navigation {
-	width: 100%;
-	height: 61%;
+    width: 100%;
+    height: 61%;
 
-	padding: 20px;
+    padding: 20px;
 
-	background: linear-gradient(180deg, #15131a 0%, #0d0d12 100%);
+    /* background-color: #291c14;
 
-	border-right: 1px solid #241b29;
+    background-image:
+        repeating-linear-gradient(
+            0deg,
+            transparent 0px,
+            rgba(0,0,0,0.16) 2px,
+            transparent 4px,
+            transparent 14px
+        ); */
 
-	box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
+    border-right: 2px solid #60432d;
+
+    box-shadow:
+        inset 0 0 15px rgba(0,0,0,0.3);
 }
+
 
 .navBar-navigation button {
-	width: 100%;
-	height: 50px;
+    position: relative;
 
-	margin: 5px 0;
+    width: 100%;
+    height: 50px;
 
-	background: linear-gradient(180deg, #18121a 0%, #0f0c12 100%);
+    margin: 5px 0;
 
-	color: var(--neon-gold);
+    background: url(./src/assets/other/button_1_test.png) center/cover no-repeat;
 
-	font-size: 30px;
-	font-family: "Teko", sans-serif;
-	letter-spacing: 1px;
+    color: #dfc59a;
 
-	border: 1px solid #2e1f17;
-	border-radius: 5px;
+    font-size: 23px;
+    font-family: var(--font-title);
+    font-weight: 600;
 
-	cursor: pointer;
+    letter-spacing: 0.5px;
 
-	text-shadow: 0 0 4px rgba(216, 155, 82, 0.7);
+    border: 0px solid #956b43;
+    border-radius: 3px;
 
-	box-shadow:
-		inset 0 0 8px rgba(255, 154, 60, 0.08),
-		0 0 4px rgba(0, 0, 0, 0.7);
+    cursor: pointer;
 
-	transition:
-		background 0.3s,
-		color 0.3s,
-		box-shadow 0.3s,
-		text-shadow 0.3s,
-		transform 0.2s;
+    text-shadow:
+        1px 2px 3px rgba(0,0,0,0.9);
+
+    box-shadow:
+        inset 0 1px rgba(255,220,170,0.1),
+        inset 0 -4px 6px rgba(25,12,5,0.25),
+        0 7px 9px rgba(0,0,0,0.45);
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease,
+        filter 0.2s ease;
 }
+
+
+/* Hover */
 
 .navBar-navigation button:hover {
-	background: linear-gradient(180deg, #24141d 0%, #161019 100%);
+    color: #f0d9b1;
 
-	color: #ffd29c;
+    border-color: #c09660;
 
-	border-color: #5c2d1d;
+    filter: brightness(1.3);
 
-	text-shadow: 0 0 8px rgba(255, 180, 100, 0.8);
-
-	box-shadow:
-		0 0 12px rgba(255, 120, 50, 0.25),
-		inset 0 0 10px rgba(255, 140, 70, 0.08);
-
-	transform: translateX(2px);
+    box-shadow:
+        inset 0 1px rgba(255,220,170,0.14),
+        0 3px 6px rgba(0,0,0,0.5);
 }
+
+
+/* =====================================================
+   LOGOUT
+   ===================================================== */
 
 .navBar-logout {
-	width: 100%;
-	height: 6%;
-	background: linear-gradient(180deg, #0d0d12 0%, #15131a 100%);
-	border-right: 1px solid #241b29;
-	border-top: 1px solid #241b29;
-	box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.5);
-	align-content: center;
-	justify-items: center;
-	padding: 1% 15%;
+    width: 100%;
+    height: 6%;
+
+    background-color: #24170f;
+
+    border-right: 2px solid #765239;
+    border-top: 3px solid #1b120d;
+
+    box-shadow:
+        inset 0 0 12px rgba(0,0,0,0.45);
+
+    align-content: center;
+    justify-items: center;
+
+    padding: 1% 15%;
 }
+
 
 .navBar-logout form {
-	width: 100%;
-	height: 100%;
-	align-content: center;
-	text-align: center;
+    width: 100%;
+    height: 100%;
+
+    align-content: center;
+    text-align: center;
 }
+
 
 .navBar-logout form button {
-	width: 100%;
-	height: 30px;
-	background: linear-gradient(180deg, #18121a 0%, #0f0c12 100%);
-	color: var(--neon-red);
-	font-size: 22px;
-	letter-spacing: 1px;
-	border: 1px solid var(--border-color);
-	border-radius: 5px;
-	cursor: pointer;
+    width: 100%;
+    height: 30px;
 
-	box-shadow:
-		inset 0 0 8px rgba(255, 0, 0, 0.08),
-		0 0 4px rgba(0, 0, 0, 0.7);
+    background-color: #60372d;
 
-	transition:
-		background 0.5s,
-		text-shadow 0.3s,
-		transform 0.2s;
+    /* color: #e0b79b; */
+    color: #6C2920;
+
+
+    font-family: var(--font-title);
+    font-size: 16px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.5px;
+
+    /* border: 1px solid #82503d; */
+    
+    border: 0px solid #82503d;
+    border-radius: 3px;
+
+    cursor: pointer;
+
+    /* text-shadow:1px 2px 2px rgba(0,0,0,0.8); */
+
+    box-shadow:
+        inset 0 1px rgba(255,220,170,0.08),
+        0 2px 4px rgba(0,0,0,0.4);
+
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease;
+
+    background: url(./src/assets/other/button_2.png);
+
+      background-size: cover; 
+  
+  /* Centruje obrazek w przycisku */
+  background-position: center; 
+  
+  /* Zapobiega powtarzaniu się tła */
+  background-repeat: no-repeat; 
 }
+
 
 .navBar-logout form button:hover {
-	background: linear-gradient(180deg, #170d13 100%, #161019 100%);
-	transform: scale(1.05);
-	text-shadow: 0 0 8px rgba(255, 0, 0, 0.8);
-	border-color: #5c1d1d;
+    /* background-color: #794638; */
+
+    color: #f1d1ae;
+
+    border-color: #bd8966;
+
+    filter: brightness(1.2);
+
 }
 
-/* Przycisk zgłoszenia w navbarze */
+
+/* =====================================================
+   SETTINGS / REPORT BUTTON
+   ===================================================== */
+
 .navBar-settings {
-	position: absolute;
-	/* justify-content: center;
-	align-items: center;
-	padding: 0 10px; */
-	left: 296px;
-	bottom: 5px;
+    position: absolute;
+
+    left: 296px;
+    bottom: 5px;
 }
+
+
 .navBar-settings button {
-	background: none;
-	border: none;
-	font-size: 30px;
-	cursor: pointer;
-	padding: 0;
-	transition:
-		transform 0.1s ease,
-		opacity 0.2s;
-	opacity: 0.5;
+    background: none;
+
+    border: none;
+
+    color: #c5a16d;
+
+    font-size: 30px;
+
+    cursor: pointer;
+
+    padding: 0;
+
+    opacity: 0.7;
+
+    transition:
+        opacity 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
 }
+
+
 .navBar-settings button:hover {
-	transform: scale(1.1);
-	opacity: 1;
+    color: #e4c18c;
+
+    opacity: 1;
+
+    transform: scale(1.08);
 }
 
-/* Modal – nakładka */
+
+/* =====================================================
+   MODAL OVERLAY
+   ===================================================== */
+
 .modal-overlay {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background-color: rgba(0, 0, 0, 0.75);
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	z-index: 2000; /* wyższy niż inne elementy */
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(15,9,5,0.82);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 2000;
 }
 
-/* Kontener modala */
+
+/* =====================================================
+   MODAL CONTENT
+   ===================================================== */
+
 .modal-content {
-	background: transparent; /* tło pochodzi z .report-form-container */
-	max-width: 90%;
-	width: 850px;
-	padding: 0;
-	border-radius: 12px;
-	box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    background: transparent;
+
+    max-width: 90%;
+    width: 850px;
+
+    padding: 0;
+
+    border-radius: 3px;
+
+    box-shadow:
+        0 8px 30px rgba(0,0,0,0.7);
 }
+
+
+/* =====================================================
+   PLAYER AVATAR
+   ===================================================== */
 
 .playerAvatar {
-    transition: all 0.2s;
+    transition:
+        border-color 0.2s ease;
+
+    border: 1px solid #805638;
+    border-radius: 3px;
 }
 
+
 .playerAvatar:hover {
-    border: 1px solid var(--neon-blue);
-    box-shadow: 0 0 12px rgba(77, 163, 255, 0.2);
+    border: 1px solid #c09660;
+
+    box-shadow:
+        0 0 6px rgba(192,150,96,0.2);
 }
+
+
+/* =====================================================
+   SCROLLBAR
+   ===================================================== */
+
+.navBar ::-webkit-scrollbar {
+    width: 7px;
+}
+
+.navBar ::-webkit-scrollbar-track {
+    background: #2b1b12;
+}
+
+.navBar ::-webkit-scrollbar-thumb {
+    background: #765239;
+    border: 1px solid #382619;
+}
+
+.navBar ::-webkit-scrollbar-thumb:hover {
+    background: #a0784d;
+}
+
+
+/* =====================================================
+   TEXT SELECTION
+   ===================================================== */
+
+.navBar ::selection {
+    background: #805638;
+    color: #f0d9b1;
+}
+
+
+/* =====================================================
+   END OF TAVERN THEME
+   ===================================================== */
